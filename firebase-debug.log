@@ -1,0 +1,51 @@
+[debug] [2025-02-26T15:29:57.935Z] ----------------------------------------------------------------------
+[debug] [2025-02-26T15:29:57.940Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AJAY\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js apps:sdkconfig ios 1:813260456344:ios:daf72e33b5c2f3b744ebed --json
+[debug] [2025-02-26T15:29:57.941Z] CLI Version:   13.31.2
+[debug] [2025-02-26T15:29:57.941Z] Platform:      win32
+[debug] [2025-02-26T15:29:57.941Z] Node Version:  v22.14.0
+[debug] [2025-02-26T15:29:57.942Z] Time:          Wed Feb 26 2025 20:59:57 GMT+0530 (India Standard Time)
+[debug] [2025-02-26T15:29:57.942Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-26T15:29:57.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-26T15:29:57.952Z] > authorizing via signed-in user (ajay2003t@gmail.com)
+[debug] [2025-02-26T15:29:57.958Z] Checked if tokens are valid: true, expires at: 1740587135839
+[debug] [2025-02-26T15:29:57.958Z] Checked if tokens are valid: true, expires at: 1740587135839
+[debug] [2025-02-26T15:29:57.960Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/iosApps/1:813260456344:ios:daf72e33b5c2f3b744ebed/config [none]
+[debug] [2025-02-26T15:29:59.384Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/iosApps/1:813260456344:ios:daf72e33b5c2f3b744ebed/config 200
+[debug] [2025-02-26T15:29:59.384Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/iosApps/1:813260456344:ios:daf72e33b5c2f3b744ebed/config {"configFilename":"GoogleService-Info.plist","configFileContents":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+QVBJX0tFWTwva2V5PgoJPHN0cmluZz5BSXphU3lCemNqOXlxQmpYVUUtYnNhZHJLaWJqMGs2Y0xCVURPVjA8L3N0cmluZz4KCTxrZXk+R0NNX1NFTkRFUl9JRDwva2V5PgoJPHN0cmluZz44MTMyNjA0NTYzNDQ8L3N0cmluZz4KCTxrZXk+UExJU1RfVkVSU0lPTjwva2V5PgoJPHN0cmluZz4xPC9zdHJpbmc+Cgk8a2V5PkJVTkRMRV9JRDwva2V5PgoJPHN0cmluZz5jb20uZXhhbXBsZS5mbHV0dGVyQXV0aDwvc3RyaW5nPgoJPGtleT5QUk9KRUNUX0lEPC9rZXk+Cgk8c3RyaW5nPmNhcmJvbi1hMjU3NDwvc3RyaW5nPgoJPGtleT5TVE9SQUdFX0JVQ0tFVDwva2V5PgoJPHN0cmluZz5jYXJib24tYTI1NzQuZmlyZWJhc2VzdG9yYWdlLmFwcDwvc3RyaW5nPgoJPGtleT5JU19BRFNfRU5BQkxFRDwva2V5PgoJPGZhbHNlPjwvZmFsc2U+Cgk8a2V5PklTX0FOQUxZVElDU19FTkFCTEVEPC9rZXk+Cgk8ZmFsc2U+PC9mYWxzZT4KCTxrZXk+SVNfQVBQSU5WSVRFX0VOQUJMRUQ8L2tleT4KCTx0cnVlPjwvdHJ1ZT4KCTxrZXk+SVNfR0NNX0VOQUJMRUQ8L2tleT4KCTx0cnVlPjwvdHJ1ZT4KCTxrZXk+SVNfU0lHTklOX0VOQUJMRUQ8L2tleT4KCTx0cnVlPjwvdHJ1ZT4KCTxrZXk+R09PR0xFX0FQUF9JRDwva2V5PgoJPHN0cmluZz4xOjgxMzI2MDQ1NjM0NDppb3M6ZGFmNzJlMzNiNWMyZjNiNzQ0ZWJlZDwvc3RyaW5nPgo8L2RpY3Q+CjwvcGxpc3Q+"}
+[info] <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBzcj9yqBjXUE-bsadrKibj0k6cLBUDOV0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>813260456344</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.flutterAuth</string>
+	<key>PROJECT_ID</key>
+	<string>carbon-a2574</string>
+	<key>STORAGE_BUCKET</key>
+	<string>carbon-a2574.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:813260456344:ios:daf72e33b5c2f3b744ebed</string>
+</dict>
+</plist>
+[debug] [2025-02-26T15:30:09.419Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\AJAY\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:269:49)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[error] 
+[error] Error: An unexpected error has occurred.
