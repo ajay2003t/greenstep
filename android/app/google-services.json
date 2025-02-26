@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813260456344",
+    "project_id": "carbon-a2574",
+    "storage_bucket": "carbon-a2574.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813260456344:android:ae6197c423989b4b44ebed",
+        "android_client_info": {
+          "package_name": "com.example.greenstep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXJwdjrl_gjYBX0mKHptznxlw6X1RIMSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
