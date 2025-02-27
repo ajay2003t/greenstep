@@ -7,11 +7,6 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dashboard',
-            style: TextStyle(fontFamily: 'fredoka_bold')),
-        backgroundColor: kPrimaryColor, // Use primary color for the app bar
-      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
