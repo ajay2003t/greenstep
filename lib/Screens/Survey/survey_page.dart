@@ -2,8 +2,24 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../components/background.dart';
 
-class SurveyPage extends StatelessWidget {
+class SurveyPage extends StatefulWidget {
   const SurveyPage({Key? key}) : super(key: key);
+
+  @override
+  _SurveyPageState createState() => _SurveyPageState();
+}
+
+class _SurveyPageState extends State<SurveyPage> {
+  List<bool> professionCheckboxes = [false, false, false, false];
+  List<bool> transportCheckboxes = [false, false, false, false, false];
+  List<bool> vehicleTypeSelections = List.filled(4, false);
+  List<bool> engineCapacitySelections = List.filled(4, false);
+  List<bool> rideSharingSelections = List.filled(3, false);
+  List<bool> mobilePhoneSelections = List.filled(4, false);
+  List<bool> upgradeFrequencySelections = List.filled(3, false);
+  List<bool> foodHabitsSelections = List.filled(3, false);
+  List<bool> processedFoodSelections = List.filled(3, false);
+  List<bool> wasteDisposalSelections = List.filled(3, false);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +34,7 @@ class SurveyPage extends StatelessWidget {
                 const SizedBox(height: defaultPadding * 5),
                 const Center(
                   child: Text(
-                    "who are you ?",
+                    "Who are you?",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
@@ -37,7 +53,7 @@ class SurveyPage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 5,
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -53,29 +69,45 @@ class SurveyPage extends StatelessWidget {
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Student'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: professionCheckboxes[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            professionCheckboxes[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Employee'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: professionCheckboxes[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            professionCheckboxes[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Business Owner'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: professionCheckboxes[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            professionCheckboxes[2] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Freelancer'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: professionCheckboxes[3],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            professionCheckboxes[3] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -91,7 +123,7 @@ class SurveyPage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 5,
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -108,42 +140,60 @@ class SurveyPage extends StatelessWidget {
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Public Transport'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: transportCheckboxes[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            transportCheckboxes[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Bicycle'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: transportCheckboxes[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            transportCheckboxes[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Walking'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: transportCheckboxes[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            transportCheckboxes[2] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Car'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: transportCheckboxes[3],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            transportCheckboxes[3] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Motorcycle'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: transportCheckboxes[4],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            transportCheckboxes[4] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
                 ),
-
-                // Personal Vehicle Type Question
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -170,29 +220,45 @@ class SurveyPage extends StatelessWidget {
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Petrol/Diesel Car'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: vehicleTypeSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            vehicleTypeSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Electric Vehicle'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: vehicleTypeSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            vehicleTypeSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Bike'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: vehicleTypeSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            vehicleTypeSelections[2] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('Scooter'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: vehicleTypeSelections[3],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            vehicleTypeSelections[3] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -223,29 +289,45 @@ class SurveyPage extends StatelessWidget {
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('<100cc'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: engineCapacitySelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            engineCapacitySelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text(' 100-200cc'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('100-200cc'),
+                        value: engineCapacitySelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            engineCapacitySelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('200-500cc'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: engineCapacitySelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            engineCapacitySelections[2] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
                         title: const Text('500+cc'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        value: engineCapacitySelections[3],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            engineCapacitySelections[3] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -275,23 +357,35 @@ class SurveyPage extends StatelessWidget {
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('daily'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Daily'),
+                        value: rideSharingSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            rideSharingSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('occasionally'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Occasionally'),
+                        value: rideSharingSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            rideSharingSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('never'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Never'),
+                        value: rideSharingSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            rideSharingSelections[2] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -320,31 +414,47 @@ class SurveyPage extends StatelessWidget {
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text(' budget'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Budget'),
+                        value: mobilePhoneSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            mobilePhoneSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('mid-range'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Mid-range'),
+                        value: mobilePhoneSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            mobilePhoneSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('flagship'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Flagship'),
+                        value: mobilePhoneSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            mobilePhoneSelections[2] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('feature phone'),
-                        value: false,
-                        onChanged: (bool? value) {},
-                      )
+                        title: const Text('Feature Phone'),
+                        value: mobilePhoneSelections[3],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            mobilePhoneSelections[3] = value!;
+                          });
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -367,29 +477,41 @@ class SurveyPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                          'How frequently do you upgrade your phone or other electronic devices? ',
+                          'How frequently do you upgrade your phone or other electronic devices?',
                           style: TextStyle(
                               fontSize: 18, fontFamily: 'fredoka_bold')),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('every year'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Every year'),
+                        value: upgradeFrequencySelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            upgradeFrequencySelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('every 2-3 years'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Every 2-3 years'),
+                        value: upgradeFrequencySelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            upgradeFrequencySelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('rarely'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Rarely'),
+                        value: upgradeFrequencySelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            upgradeFrequencySelections[2] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -418,23 +540,35 @@ class SurveyPage extends StatelessWidget {
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('vegetarian'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Vegetarian'),
+                        value: foodHabitsSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            foodHabitsSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('vegan'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Vegan'),
+                        value: foodHabitsSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            foodHabitsSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('non-vegetarian'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Non-vegetarian'),
+                        value: foodHabitsSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            foodHabitsSelections[2] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -458,29 +592,41 @@ class SurveyPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                          'How often do you eat processed or packaged foods? ',
+                          'How often do you eat processed or packaged foods?',
                           style: TextStyle(
                               fontSize: 18, fontFamily: 'fredoka_bold')),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text(' daily'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Daily'),
+                        value: processedFoodSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            processedFoodSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('occasionally'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Occasionally'),
+                        value: processedFoodSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            processedFoodSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('rarely'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Rarely'),
+                        value: processedFoodSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            processedFoodSelections[2] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -509,23 +655,35 @@ class SurveyPage extends StatelessWidget {
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text('segregated recycling'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Recycling'),
+                        value: wasteDisposalSelections[0],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            wasteDisposalSelections[0] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text(' general waste bin'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Composting'),
+                        value: wasteDisposalSelections[1],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            wasteDisposalSelections[1] = value!;
+                          });
+                        },
                       ),
                       CheckboxListTile(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 0, horizontal: 16),
-                        title: const Text(' composting'),
-                        value: false,
-                        onChanged: (bool? value) {},
+                        title: const Text('Landfill'),
+                        value: wasteDisposalSelections[2],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            wasteDisposalSelections[2] = value!;
+                          });
+                        },
                       ),
                     ],
                   ),

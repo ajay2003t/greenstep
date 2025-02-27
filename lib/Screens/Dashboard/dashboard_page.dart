@@ -18,23 +18,23 @@ class DashboardPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Welcome to the Dashboard!',
                 style: TextStyle(fontSize: 24, fontFamily: 'fredoka_bold'),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Here you can view your survey results and other information.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () {
                   // Logic to navigate back to the survey or other actions
                   Navigator.pop(context);
                 },
-                child: Text('Back to Survey',
+                child: const Text('Back to Survey',
                     style: TextStyle(fontFamily: 'fredoka_bold')),
               ),
             ],
