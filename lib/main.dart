@@ -3,7 +3,7 @@ import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_auth/Screens/Survey/survey_page.dart';
 import 'package:flutter_auth/constants.dart';
-import 'package:flutter_auth/Screens/Dashboard/dashboard_page.dart'; // Import DashboardPage
+import 'package:flutter_auth/Screens/main/dashboard_main.dart'; // Import DashboardPage
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           ? SurveyPage()
           : const WelcomeScreen(),
       routes: {
-        '/dashboard': (context) => DashboardPage(),
+        '/dashboard': (context) => DashboardMain(),
       },
     );
   }
