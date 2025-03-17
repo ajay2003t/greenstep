@@ -1,4 +1,4 @@
-import 'package:flutter_auth/constants.dart';
+//import 'package:flutter_auth/constants.dart';
 import 'package:flutter_auth/controllers/menu_app_controller.dart';
 import 'package:flutter_auth/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ class DashboardMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Admin Panel',
+      title: 'GreenStep',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)

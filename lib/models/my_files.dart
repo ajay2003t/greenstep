@@ -36,7 +36,7 @@ List demoMyFiles = [
   CloudStorageInfo(
     title: "Transport",
     numOfFiles: 1328,
-    svgSrc: "assets/icons/warning.svg",
+    svgSrc: "assets/icons/orange.svg",
     totalStorage: "1.5 kg CO2",
     color: Colors.greenAccent,
     percentage: 80,

@@ -30,7 +30,11 @@ dependencies:
   fl_chart: ^0.70.2
   google_fonts: ^6.2.1
   provider: ^6.1.2
-
+  flutter_native_splash: ^2.3.7
+  flutter_riverpod: ^2.4.10
+  flutter_dotenv: ^5.1.0
+  google_generative_ai: ^0.4.0
+  charts_common: ^0.12.0
 
 
 
@@ -55,6 +59,8 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/
+    - .env
   
   fonts:
     - family: fredoka
@@ -64,7 +70,11 @@ flutter:
       fonts:
         - asset: fonts/Fredoka-Bold.ttf
 
-
+flutter_native_splash:
+  color: " #90EE90"
+  image: assets/splashscreen.png
+  android: true
+  ios: true
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

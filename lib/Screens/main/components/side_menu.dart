@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/Screens/chatbot/chatbot_main.dart';
+import 'package:flutter_auth/Screens/main/dashboard_main.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SideMenu extends StatelessWidget {
@@ -17,20 +19,32 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Dashboard",
             svgSrc: "assets/icons/menu_dashboard.svg",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => DashboardMain(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
-            title: "Transaction",
+            title: "Record",
             svgSrc: "assets/icons/menu_tran.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Task",
+            title: "Ai Chat",
             svgSrc: "assets/icons/menu_task.svg",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => const ChatBot(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
-            title: "Documents",
+            title: "Community",
             svgSrc: "assets/icons/menu_doc.svg",
             press: () {},
           ),
@@ -40,7 +54,7 @@ class SideMenu extends StatelessWidget {
             press: () {},
           ),
           DrawerListTile(
-            title: "Notification",
+            title: "Rewards and Points",
             svgSrc: "assets/icons/menu_notification.svg",
             press: () {},
           ),
