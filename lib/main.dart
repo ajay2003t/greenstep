@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_auth/Screens/Survey/survey_page.dart';
 import 'package:flutter_auth/Screens/chatbot/chatbot_main.dart';
+import 'package:flutter_auth/Screens/community/community_main.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:flutter_auth/Screens/main/dashboard_main.dart'; // Import DashboardPage
 import 'package:firebase_core/firebase_core.dart';
@@ -61,6 +61,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/dashboard': (context) => DashboardMain(),
           ChatBot.routeName: (context) => const ChatBot(),
+          CommunityMain.routeName: (context) => const CommunityMain(),
         },
       ),
     );
