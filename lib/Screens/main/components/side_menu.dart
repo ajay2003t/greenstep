@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/chatbot/chatbot_main.dart';
 import 'package:flutter_auth/Screens/community/community_main.dart';
 import 'package:flutter_auth/Screens/main/dashboard_main.dart';
+import 'package:flutter_auth/Screens/record/record_main.dart';
 import 'package:flutter_auth/Screens/shop/shop_main.dart';
+import 'package:flutter_auth/Screens/user/profile_main.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SideMenu extends StatelessWidget {
@@ -32,7 +34,13 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Record",
             svgSrc: "assets/icons/menu_tran.svg",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => const RecordMain(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             title: "Ai Chat",
@@ -75,12 +83,13 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Profile",
             svgSrc: "assets/icons/menu_profile.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Settings",
-            svgSrc: "assets/icons/menu_setting.svg",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => const ProfileMain(),
+                ),
+              );
+            },
           ),
         ],
       ),

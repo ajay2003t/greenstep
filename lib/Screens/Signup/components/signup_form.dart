@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
 import '../../Login/login_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
+  String? _name;
   String? _email;
   String? _password;
 
@@ -22,6 +24,25 @@ class _SignUpFormState extends State<SignUpForm> {
       key: _formKey,
       child: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            child: TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              textInputAction: TextInputAction.next,
+              cursorColor: kPrimaryColor,
+              onSaved: (name) {
+                _name = name; // Store the email in a variable
+              },
+              decoration: const InputDecoration(
+                hintText: "Your name",
+                hintStyle: TextStyle(fontFamily: 'fredoka_bold', fontSize: 16),
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(defaultPadding),
+                  child: Icon(Icons.person),
+                ),
+              ),
+            ),
+          ),
           TextFormField(
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
@@ -67,6 +88,20 @@ class _SignUpFormState extends State<SignUpForm> {
                   email: _email!,
                   password: _password!,
                 );
+                final User? user = FirebaseAuth.instance.currentUser;
+                final _uid = user!.uid;
+                user.updateDisplayName(_name!);
+                user.reload();
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(_uid)
+                    .set({
+                  'id': _uid,
+                  'name': _name!,
+                  'email': _email!,
+                  'createdAt': Timestamp.now(),
+                });
+
                 // Show success message
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Registered successfully!')),

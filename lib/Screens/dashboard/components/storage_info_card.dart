@@ -9,11 +9,10 @@ class StorageInfoCard extends StatelessWidget {
     required this.title,
     required this.svgSrc,
     required this.amountOfFiles,
-    required this.numOfFiles,
+    //required this.numOfFiles,
   }) : super(key: key);
 
   final String title, svgSrc, amountOfFiles;
-  final int numOfFiles;
 
   @override
   Widget build(BuildContext context) {
