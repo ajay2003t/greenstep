@@ -96,7 +96,7 @@ class _SignUpFormState extends State<SignUpForm> {
                     .collection('users')
                     .doc(_uid)
                     .set({
-                  'id': _uid,
+                  'userId': _uid,
                   'name': _name!,
                   'email': _email!,
                   'createdAt': Timestamp.now(),

@@ -4,6 +4,7 @@ import 'package:flutter_auth/Screens/shop/constants.dart';
 class ProfileWidget extends StatelessWidget {
   final IconData icon;
   final String title;
+
   const ProfileWidget({
     Key? key,
     required this.icon,
